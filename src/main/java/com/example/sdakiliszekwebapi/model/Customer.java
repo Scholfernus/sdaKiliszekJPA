@@ -1,4 +1,4 @@
-package com.example.sdakiliszekwebapi.exception_handling.model;
+package com.example.sdakiliszekwebapi.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

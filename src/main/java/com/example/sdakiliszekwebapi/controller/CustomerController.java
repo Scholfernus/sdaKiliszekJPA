@@ -5,10 +5,11 @@ import com.example.sdakiliszekwebapi.exception.CustomerAlreadyExistsException;
 import com.example.sdakiliszekwebapi.handlers.ErrorResponse;
 import com.example.sdakiliszekwebapi.model.Customer;
 import com.example.sdakiliszekwebapi.service.CustomerService;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @RestController
 @RequiredArgsConstructor

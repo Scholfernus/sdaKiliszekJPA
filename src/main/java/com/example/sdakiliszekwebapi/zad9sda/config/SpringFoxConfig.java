@@ -1,7 +1,10 @@
 package com.example.sdakiliszekwebapi.zad9sda.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.hateoas.client.LinkDiscoverer;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.spi.DocumentationType;
@@ -11,6 +14,13 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableSwagger2
 public class SpringFoxConfig {
+
+    private final LinkDiscoverer linkDiscoverer;
+
+    @Autowired
+    public SpringFoxConfig(@Qualifier("fileDataList") LinkDiscoverer linkDiscoverer) {
+        this.linkDiscoverer = linkDiscoverer;
+    }
 
     @Bean
     public Docket api() {
